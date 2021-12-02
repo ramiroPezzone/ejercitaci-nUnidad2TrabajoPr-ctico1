@@ -1,0 +1,543 @@
+:root {
+  --metallic-sunburst: #9f8848ff;
+  --fondo-body: #253993;
+  --oxford-blue: rgba(17, 26, 65, 1);
+  --oxford-blue-faded: rgba(17, 26, 65, 0.5);
+  --laser-lemon: #fcfc62ff;
+  --laser-lemon-faded: rgba(252, 252, 98, 0.712);
+  --rufous: #a40606ff;
+  --rufous-faded: rgba(164, 6, 6, 0.432);
+  --lavender-gray: #cbcbd4ff;
+  --lavender-gray-faded: rgba(203, 203, 212, 0.5);
+  --metallic-sunburst-faded: #9f8848a8;
+  --coquelicot: #f34213;
+  --coquelicot-faded: #f3441344;
+  --fuente-mayuscula: "Sedgwick Ave Display", cursive;
+  --fuente-minuscula: "New Tegomin", serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: content-box;
+}
+.contenedor-gral-nav {
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+}
+.contenedor-nav {
+  background: #000;
+  position: relative;
+}
+.logo-principal {
+  background: url(../img/misc/logo-abysmo.png) no-repeat center;
+  margin: 0 auto;
+  height: 40vw;
+  max-height: 250px;
+  max-width: 500px;
+  background-size: contain;
+}
+.nav-fijo {
+  display: none;
+}
+.nav-oculto {
+  position: absolute;
+  font-family: var(--fuente-minuscula);
+  background-color: var(--coquelicot-faded);
+  backdrop-filter: blur(6px);
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 2em;
+  font-weight: bold;
+  right: 100vw;
+  transition: 0.5s;
+  z-index: 500;
+  padding-top: 50px;
+}
+.nav-oculto a {
+  display: block;
+  margin-left: 30px;
+  text-decoration: none;
+  color: var(--metallic-sunburst);
+  text-shadow: 2px 4px 4px var(--rufous), -2px 4px 4px var(--rufous),
+    2px -4px 4px var(--rufous), -2px -4px 4px var(--rufous);
+  margin-top: 70px;
+}
+.menu-hamburguesa {
+  position: absolute;
+  background: url(../img/misc/menu-hamburguesa-cerrado.png) no-repeat center;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  top: 10px;
+  right: 15px;
+  z-index: 1000;
+  transition: 0.5s;
+}
+.mutacion-menu-hamburguesa {
+  background-image: url(../img/misc/menu-hamburguesa-x.png);
+  background-size: 40px;
+  transform: rotate(720deg);
+  transition: 0.5s;
+}
+.despliegueMenu {
+  right: 0;
+  transition: 0.5s;
+}
+.header {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  font-family: var(--fuente-mayuscula);
+  text-align: center;
+  text-transform: uppercase;
+}
+.header-img {
+  background: url(../img/fondos/vaso-cerveza-botella-marron_152520-16.jpg)
+    no-repeat center;
+  width: 100vw;
+  height: 78vh;
+}
+.h1 {
+  position: absolute;
+  background: var(--metallic-sunburst-faded);
+  backdrop-filter: blur(5px);
+  margin: 0 5px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-weight: normal;
+  text-shadow: 2px 3px 4px var(--coquelicot);
+}
+.h2 {
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: var(--rufous-faded);
+  text-transform: lowercase;
+  padding: 5px;
+  position: absolute;
+  bottom: 10px;
+  color: var(--oxford-blue);
+  text-shadow: 2px 2px 4px var(--laser-lemon);
+}
+.linea-divisora {
+  background: url(../img/misc/linea-griega.png) no-repeat center;
+  background-size: cover;
+  height: 30px;
+  margin: 10px 0;
+}
+.secciones {
+  position: relative;
+  text-align: center;
+}
+.img-nuestras-cervezas {
+  background: url(../img/fondos/nuestras-cervezas.png) no-repeat center;
+}
+.img-registrate-aca {
+  background: url(../img/fondos/registro.jpg) no-repeat center;
+}
+.img-nuestras-cervezas,
+.img-registrate-aca {
+  position: relative;
+  display: flex;
+  background-size: 1000px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  transition: 1.5s;
+  background-size: cover;
+}
+.nuestras-cervezas h3,
+.registrate-aca h3 {
+  font-family: var(--fuente-minuscula);
+  font-size: 2.2em;
+  font-weight: bold;
+  color: var(--oxford-blue);
+  z-index: 1000;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--metallic-sunburst-faded);
+  backdrop-filter: blur(3px);
+}
+.secciones a {
+  text-decoration: none;
+}
+
+/* NUESTRAS CERVEZAS */
+.contenedor-productos {
+  display: inline-block;
+  margin: 30px 0;
+}
+.contenedor-flex-productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+.item-nuestras-cervezas {
+  position: relative;
+  background: url(../img/misc/fondo-item-cervezas.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+  width: 300px;
+  height: 620px;
+  padding: 10px;
+}
+.contenedor-productos img {
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  max-height: 400px;
+}
+.contenedor-productos h4 {
+  text-transform: uppercase;
+  font-family: var(--fuente-mayuscula);
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px var(--coquelicot);
+}
+.contenedor-productos p {
+  font-family: var(--fuente-minuscula);
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--oxford-blue);
+  text-shadow: 2px 2px 2px var(--laser-lemon);
+}
+.grad-alc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: 0 auto;
+  padding: 2px;
+  font-weight: bolder;
+  background: var(--rufous-faded);
+  width: 40%;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  background-color: #000;
+  padding: 5px 0;
+  font-family: var(--fuente-minuscula);
+  color: var(--coquelicot);
+}
+
+footer span {
+  color: var(--laser-lemon);
+  text-shadow: 2px 2px 5px var(--laser-lemon), -2px 2px 5px var(--laser-lemon);
+}
+
+/* FORMULARIO DE INICIO DE SESIÓN - CREACIÓN DE CUENTA */
+.forms {
+  position: relative;
+  background: url(../img/fondos/fondo-papiro.png) no-repeat center;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  margin: 30px auto;
+  font-family: var(--fuente-minuscula);
+  font-weight: bolder;
+  color: var(--oxford-blue);
+  overflow-y: hidden;
+  max-width: 500px;
+}
+.contenedor-iniciar-sesion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  transition: 1.2s;
+}
+.forms form {
+  text-align: left;
+  margin: 10px 0;
+}
+.forms button {
+  background: var(--coquelicot-faded);
+  padding: 3px 5px;
+  margin-top: 10px;
+  font-family: var(--fuente-mayuscula);
+  font-size: 1em;
+  color: var(--oxford-blue);
+  border-radius: 20%;
+  text-shadow: 2px 2px 4px var(--rufous);
+}
+.btn-submit {
+  text-align: right;
+}
+.contenedor-iniciar-sesion input {
+  margin: 20px 0;
+}
+.forms input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--rufous);
+}
+.forms label {
+  text-shadow: 2px 2px 4px var(--oxford-blue-faded);
+}
+.forms h3 {
+  text-shadow: 3px 3px 3px var(--laser-lemon);
+  font-size: 1.5em;
+  text-align: center;
+}
+.forms h4 {
+  text-shadow: 3px 3px 3px var(--coquelicot);
+  border-radius: 10%;
+  background: linear-gradient(#0000, var(--lavender-gray-faded));
+}
+.forms input {
+  width: 100%;
+}
+.flecha {
+  text-align: center;
+  font-size: 1.2em;
+}
+.contenedor-crear-cuenta {
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(150vw, -50%);
+  transition: 1.2s;
+}
+.contenedor-crear-cuenta h2 {
+  font-size: 0.8em;
+  text-align: center;
+  color: var(--rufous);
+  text-decoration: underline;
+}
+.cambio-de-form-crear-cuenta {
+  text-align: center;
+}
+.cambio-a-iniciar-sesion {
+  text-align: center;
+}
+.flecha-izquierda {
+  transform: rotate(180deg);
+  font-size: 1.2em;
+  text-shadow: -3px -3px 3px var(--coquelicot);
+}
+.desplazar-form-inicio-de-sesion {
+  transform: translate(-150vw, -50%);
+  transition: 1.2s;
+}
+.desplazar-form-crear-cuenta {
+  display: block;
+  transform: translate(-50%, -50%);
+  transition: 1.2s;
+}
+
+/* APARTADO RESPUESTA DE API */
+
+#apartado-api {
+  text-align: right;
+  margin-top: 120px;
+  margin-right: 20px;
+  color: var(--lavender-gray);
+  text-shadow: 2px 4px 4px var(--rufous-faded), -2px 4px 4px var(--rufous-faded),
+    2px -4px 4px var(--rufous-faded), -2px -4px 4px var(--rufous-faded);
+}
+.contenedor-consumo-de-api {
+  width: 90vw;
+  max-width: 900px;
+  background-color: var(--laser-lemon-faded);
+  border-radius: 10%;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+#bienvenida-api,
+#titulo-consumo-api {
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  font-family: var(--fuente-minuscula);
+  color: var(--rufous);
+  margin: 20px 0;
+}
+#bienvenida-api {
+  font-size: 1.4em;
+}
+#titulo-consumo-api {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#descripcion-ej-3 {
+  font-size: 1.2em;
+  color: var(--oxford-blue);
+}
+.seccion-consumo-de-api {
+  margin: 20px;
+  
+}
+#datos-de-la-api {
+  margin: 20px;
+}
+#nombre-personaje,
+#fecha-nac-personaje {
+  font-family: var(--fuente-minuscula);
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+@media (min-width: 500px) {
+  .contenedor-iniciar-sesion label,
+  .contenedor-crear-cuenta {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 660px) {
+  .menu-hamburguesa {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 750px) {
+  .h1 {
+    padding: 12px;
+  }
+  .h2 {
+    bottom: 20%;
+    padding: 30px;
+    line-height: 2;
+    backdrop-filter: blur(5px);
+    text-transform: uppercase;
+  }
+  .header-img {
+    background: url(../img/fondos/fondo-grande.png) no-repeat;
+    background-size: cover;
+    background-position: 90%;
+  }
+  .linea-divisora {
+    background-repeat: repeat;
+  }
+}
+@media (min-width: 1000px) {
+  .logo-principal {
+    width: 250px;
+    height: 120px;
+    margin: 0;
+    display: inline-block;
+  }
+  .menu-hamburguesa {
+    display: none;
+  }
+  .nav-fijo {
+    position: absolute;
+    display: inline-block;
+    top: 85px;
+    margin-left: 20px;
+  }
+  .nav-fijo a {
+    text-decoration: none;
+    background: linear-gradient(var(--metallic-sunburst) 60%, #000);
+    font-size: 1.2em;
+    border-radius: 10px 10px 0 0;
+    color: var(--laser-lemon);
+    text-shadow: 3px 3px 3px var(--oxford-blue);
+    font-family: var(--fuente-minuscula);
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+  }
+  .linea-divisora {
+    background-size: contain;
+  }
+  .img-nuestras-cervezas,
+  .img-registrate-aca {
+    background-size: cover;
+  }
+  .contenedor-cortina {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .cortina-izq,
+  .cortina-der {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: var(--oxford-blue-faded);
+    backdrop-filter: blur(5px);
+  }
+  .cortina-izq {
+    left: 0;
+    transition: 1s;
+  }
+  .cortina-der {
+    left: 50%;
+    transition: 1s;
+  }
+  .contenedor-cortina:hover > .cortina-izq {
+    left: -10%;
+    transition: 1s;
+  }
+  .contenedor-cortina:hover > .cortina-der {
+    left: 60%;
+    transition: 1s;
+  }
+  footer {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 1200px) {
+  .img-nuestras-cervezas,
+  .img-registrate-aca {
+    height: 600px;
+  }
+  .nav-fijo {
+    top: 78px;
+    margin-left: 60px;
+  }
+  .nav-fijo a {
+    font-size: 1.5em;
+    padding: 12px;
+    margin: 12px;
+  }
+  .item-nuestras-cervezas {
+    height: 650px;
+  }
+  .contenedor-productos h4 {
+    font-size: 2.7em;
+  }
+  .contenedor-productos p {
+    font-size: 1.3em;
+  }
+  .forms {
+    background-size: cover;
+  }
+  .contenedor-iniciar-sesion, .contenedor-crear-cuenta {
+    width: 80%;
+  }
+  .forms h3 {
+    font-size: 2em;
+  }
+  .forms label {
+    font-size: 1.5em;
+  }
+  .contenedor-crear-cuenta h2 {
+    font-size: 1.2em;
+    text-shadow: 2px 2px 3px var(--laser-lemon);
+  }
+  .forms input {
+    font-size: 1.2em;
+  }
+  .contenedor-consumo-de-api {
+    font-size: 1.3em;
+  }
+}

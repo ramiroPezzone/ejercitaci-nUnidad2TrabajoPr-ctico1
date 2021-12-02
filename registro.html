@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ramiro Carlos Pezzone">
+
+    <!-- HOJAS DE ESTILO -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon/abysmo.png" type="image/x-icon">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+
+    <!-- TITULO -->
+    <title>Cerveza Abysmo</title>
+
+</head>
+
+<nav class="contenedor-gral-nav">
+    <div class="contenedor-nav">
+
+        <a href="index.html">
+            <div class="logo-principal"></div>
+        </a>
+
+        <div class="menu-hamburguesa"></div>
+
+        <div class="nav-oculto">
+            <a href="index.html">Principal</a>
+            <a href="nuestras-cervezas.html">Nuestras cervezas</a>
+            <a href="ejercicio-de-consumo-de-api.html" id="apartado-api">Ejercicio de consumo de API</a>
+
+        </div>
+        <div class="nav-fijo">
+            <a href="index.html">Principal</a>
+            <a href="nuestras-cervezas.html">Nuestras cervezas</a>
+            <a href="ejercicio-de-consumo-de-api.html" id="apartado-api">Ejercicio de consumo de API</a>
+
+        </div>
+    </div>
+</nav>
+
+<section class="forms">
+    <div class="contenedor-iniciar-sesion">
+        <div class="campo-de-registro">
+            <h3>
+                Iniciá tu sesión acá
+            </h3>
+        </div>
+        <form action="" class="iniciar-sesion">
+            <div class="campo-de-registro">
+                <label for="nombre-de-usuario">
+                    Nombre de usuario
+                    <input type="text" autocomplete="username">
+                </label>
+            </div>
+            <div class="campo-de-registro">
+                <label for="password">
+                    Contraseña
+                    <input type="password" autocomplete="current-password">
+                </label>
+            </div>
+            <div class="campo-de-registro btn-submit">
+                <label for="submit">
+                    <button type="submit" id="btn-iniciar-sesion">Ingresar</button>
+                </label>
+            </div>
+        </form>
+        <div class="cambio-de-form">
+            <h4>
+                O si aún no tenés tu cuenta
+                <p class="flecha">⟿</p>
+            </h4>
+        </div>
+    </div>
+
+    <div class="contenedor-crear-cuenta">
+        <div class="campo-de-registro">
+            <h3>
+                Create tu cuenta en un par de sorbos
+            </h3>
+            <h2>(solo si sos mayor de 18!!)</h2>
+        </div>
+        <form action="" class="crear-cuenta">
+            <div class="campo-de-registro">
+                <label for="nombreCompleto">
+                    Nombre completo
+                    <input type="text" class="nombre-completo">
+                </label>
+            </div>
+            <div class="campo-de-registro">
+                <label for="fechaDeNac">
+                    Fecha de nacimiento 
+                    <input type="date" id="fecha-de-nac">
+                </label>
+            </div>
+            <div class="campo-de-registro">
+                <label for="telefono">
+                    Teléfono
+                    <input type="tel">
+                </label>
+            </div>
+            <div class="campo-de-registro ">
+                <label for="email">
+                    Email
+                    <input type="email" autocomplete="off" class="campo-e-mail">
+                </label>
+            </div>
+            <div class="campo-de-registro">
+                <label for="password-nuevo">
+                    Contraseña
+                    <input type="password" autocomplete="new-password">
+                </label>
+            </div>
+            <div class="campo-de-registro">
+                <label for="password-nuevo">
+                    Repetir contraseña
+                    <input type="password" autocomplete="new-password">
+                </label>
+            </div>
+            <div class="campo-de-registro btn-submit">
+                <label for="submit">
+                    <button type="submit" class="btn-iniciar-sesion">
+                        Notificar a Zeus
+                    </button>
+                </label>
+            </div>
+        </form>
+        <div class="cambio-a-iniciar-sesion">
+            <h4>pero si ya tenés tu cuenta<p class="flecha-izquierda">⟿</p>
+            </h4>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <h4 class="powered">
+        Powered by <span>⚡</span>
+    </h4>
+    <h4 class="footer-nombre">
+        Ramiro Carlos Pezzone
+    </h4>
+</footer>
+
+<script src="js/myscript.js"></script>
+</body>
+
+</html>
